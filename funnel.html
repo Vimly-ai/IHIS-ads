@@ -783,34 +783,7 @@
                 document.getElementById("floatingCTA").style.display = "none";
             }
         };
-    </script>
-<script>
-    // Set the target date (current time + 20 days, 23 hours, 60 mins, 120 secs)
-    const targetDate = new Date('2025-05-30T22:08:19-06:00');
-
-    function updateCountdown() {
-        const now = new Date();
-        const diff = targetDate - now;
-
-        if (diff <= 0) {
-            document.getElementById('days2').textContent = '00';
-            document.getElementById('hours2').textContent = '00';
-            document.getElementById('minutes2').textContent = '00';
-            document.getElementById('seconds2').textContent = '00';
-            return;
-        }
-
-        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
-
-        document.getElementById('days2').textContent = days.toString().padStart(2, '0');
-        document.getElementById('hours2').textContent = hours.toString().padStart(2, '0');
-        document.getElementById('minutes2').textContent = minutes.toString().padStart(2, '0');
-        document.getElementById('seconds2').textContent = seconds.toString().padStart(2, '0');
-    }
-
+    
     // Update countdown every second
     setInterval(updateCountdown, 1000);
     updateCountdown(); // Initial call
