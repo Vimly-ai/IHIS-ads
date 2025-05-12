@@ -16,7 +16,7 @@
 
     <!-- Event snippet for Calendar Booking Success conversion page -->
     <script>
-    function gtag_report_conversion(url) {
+    function gtag_report_calendar_conversion(url) {
       var callback = function () {
         if (typeof(url) != 'undefined') {
           window.location = url;
@@ -26,6 +26,40 @@
           'send_to': 'AW-16579341504/TK5DCJTF0sYaEMDZ0uE9',
           'value': 1.0,
           'currency': 'USD',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
+    <!-- Event snippet for Enroll Full Payment conversion page -->
+    <script>
+    function gtag_report_enrollment_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16579341504/_rbrCI7w0sYaEMDZ0uE9',
+          'transaction_id': '',
+          'event_callback': callback
+      });
+      return false;
+    }
+    </script>
+
+    <!-- Event snippet for Enroll With Payments conversion page -->
+    <script>
+    function gtag_report_payment_plan_conversion(url) {
+      var callback = function () {
+        if (typeof(url) != 'undefined') {
+          window.location = url;
+        }
+      };
+      gtag('event', 'conversion', {
+          'send_to': 'AW-16579341504/LtSRCJuVycYaEMDZ0uE9',
+          'transaction_id': '',
           'event_callback': callback
       });
       return false;
@@ -223,10 +257,10 @@
                 </div>
                 
                 <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6 mb-8">
-                    <a href="https://calendly.com/jillbucaro/15-minute-chat?kuid=391e8e10-a343-40e7-bb9e-dfee0bceea0d-1746506343&kref=https%3A%2F%2Fwww.ihistudies.com%2Fcoach%2F" onclick="return gtag_report_conversion(this.href);" class="btn-primary py-4 px-8 rounded-lg font-bold text-center text-lg pulse">
+                    <a href="https://calendly.com/jillbucaro/15-minute-chat?kuid=391e8e10-a343-40e7-bb9e-dfee0bceea0d-1746506343&kref=https%3A%2F%2Fwww.ihistudies.com%2Fcoach%2F" onclick="return gtag_report_calendar_conversion(this.href);" class="btn-primary py-4 px-8 rounded-lg font-bold text-center text-lg pulse">
                         Book a Chat with Jill <i class="fas fa-arrow-right ml-2"></i>
                     </a>
-                    <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" class="btn-secondary py-4 px-8 rounded-lg font-bold text-center text-lg">
+                    <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" onclick="return gtag_report_enrollment_conversion(this.href);" class="btn-secondary py-4 px-8 rounded-lg font-bold text-center text-lg">
                         Enroll Now <i class="fas fa-graduation-cap ml-2"></i>
                     </a>
                 </div>
@@ -475,7 +509,7 @@
                             <h4 class="text-xl font-bold mb-2">Pay in Full</h4>
                             <p class="text-3xl font-bold mb-4 teal-accent">$2,997</p>
                             <p class="mb-6">Save by paying the full amount today</p>
-                            <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" class="btn-primary py-3 px-6 rounded-lg font-bold text-center text-lg block">
+                            <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" onclick="return gtag_report_enrollment_conversion(this.href);" class="btn-primary py-3 px-6 rounded-lg font-bold text-center text-lg block">
                                 Enroll Now - Pay in Full
                             </a>
                         </div>
@@ -485,7 +519,7 @@
                             <h4 class="text-xl font-bold mb-2">Easy Payment Plan</h4>
                             <p class="text-3xl font-bold mb-4 teal-accent">$799.25</p>
                             <p class="mb-6">4 monthly payments of $799.25</p>
-                            <a href="https://academyepic.kartra.com/checkout/4a68897fd7b1f15d644209b236de7cc8" class="btn-secondary py-3 px-6 rounded-lg font-bold text-center text-lg block">
+                            <a href="https://academyepic.kartra.com/checkout/4a68897fd7b1f15d644209b236de7cc8" onclick="return gtag_report_payment_plan_conversion(this.href);" class="btn-secondary py-3 px-6 rounded-lg font-bold text-center text-lg block">
                                 Enroll Now - Payment Plan
                             </a>
                         </div>
@@ -603,10 +637,10 @@
                     <h3 class="text-2xl font-bold mb-6">Join Our Next Cohort Starting June 2025</h3>
                     <p class="text-lg mb-6">Only 9 spots available. Secure yours today!</p>
                     <div class="flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
-                        <a href="https://calendly.com/jillbucaro/15-minute-chat?kuid=391e8e10-a343-40e7-bb9e-dfee0bceea0d-1746506343&kref=https%3A%2F%2Fwww.ihistudies.com%2Fcoach%2F" onclick="return gtag_report_conversion(this.href);" class="btn-secondary py-4 px-8 rounded-lg font-bold text-center text-lg">
+                        <a href="https://calendly.com/jillbucaro/15-minute-chat?kuid=391e8e10-a343-40e7-bb9e-dfee0bceea0d-1746506343&kref=https%3A%2F%2Fwww.ihistudies.com%2Fcoach%2F" onclick="return gtag_report_calendar_conversion(this.href);" class="btn-secondary py-4 px-8 rounded-lg font-bold text-center text-lg">
                             Book a Chat with Jill <i class="fas fa-arrow-right ml-2"></i>
                         </a>
-                        <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" class="btn-primary py-4 px-8 rounded-lg font-bold text-center text-lg">
+                        <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" onclick="return gtag_report_enrollment_conversion(this.href);" class="btn-primary py-4 px-8 rounded-lg font-bold text-center text-lg">
                             Enroll Now <i class="fas fa-graduation-cap ml-2"></i>
                         </a>
                     </div>
@@ -720,7 +754,7 @@
                             <h4 class="text-xl font-bold mb-2">Pay in Full</h4>
                             <p class="text-3xl font-bold mb-4 teal-accent">$2,997</p>
                             <p class="mb-6">Save by paying the full amount today</p>
-                            <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" class="btn-primary py-3 px-6 rounded-lg font-bold text-center text-lg block">
+                            <a href="https://academyepic.kartra.com/checkout/a8da2a94f64b8828fdaa3675edd0a0f0" onclick="return gtag_report_enrollment_conversion(this.href);" class="btn-primary py-3 px-6 rounded-lg font-bold text-center text-lg block">
                                 Enroll Now - Pay in Full
                             </a>
                         </div>
@@ -730,7 +764,7 @@
                             <h4 class="text-xl font-bold mb-2">Easy Payment Plan</h4>
                             <p class="text-3xl font-bold mb-4 teal-accent">$799.25</p>
                             <p class="mb-6">4 monthly payments of $799.25</p>
-                            <a href="https://academyepic.kartra.com/checkout/4a68897fd7b1f15d644209b236de7cc8" class="btn-secondary py-3 px-6 rounded-lg font-bold text-center text-lg block">
+                            <a href="https://academyepic.kartra.com/checkout/4a68897fd7b1f15d644209b236de7cc8" onclick="return gtag_report_payment_plan_conversion(this.href);" class="btn-secondary py-3 px-6 rounded-lg font-bold text-center text-lg block">
                                 Enroll Now - Payment Plan
                             </a>
                         </div>
